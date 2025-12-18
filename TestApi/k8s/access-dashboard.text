@@ -1,0 +1,9 @@
+Port forwarding:
+microk8s kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443
+
+
+Access token:
+sudo microk8s kubectl describe secret -n kube-system microk8s-dashboard-token
+
+URL:
+https://localhost:8443/
