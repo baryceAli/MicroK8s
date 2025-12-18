@@ -1,3 +1,5 @@
+Access dashboard
+
 Port forwarding:
 microk8s kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443
 
@@ -7,3 +9,7 @@ sudo microk8s kubectl describe secret -n kube-system microk8s-dashboard-token
 
 URL:
 https://localhost:8443/
+
+
+Running commands in a Pod 
+kubectl run -it --rm --restart=Never busybox --image=gcr.io/google-containers/busybox sh
